@@ -5,7 +5,7 @@
 
 .bg::before {
     content: "";
-    background-image: url("food-4k-1pf6px6ryqfjtnyr.jpg");
+    background-image: url("./images/food-4k-1pf6px6ryqfjtnyr.jpg");
     background-size: cover;
     position: fixed;
     top: 0;
@@ -33,4 +33,18 @@
     position: fixed;
     right: 3%;
     top: 1%;
+}
+
+.searchBarBox {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20vw;
+    height: 10vw;
+    margin: auto;
+    margin-top:20vw;
+    border-radius: 1vw;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.searchBar {
+    margin:auto;
 }
