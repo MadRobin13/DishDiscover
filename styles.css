@@ -1,0 +1,36 @@
+.bg {
+    margin: 0;
+    overflow: auto;
+}
+
+.bg::before {
+    content: "";
+    background-image: url("food-4k-1pf6px6ryqfjtnyr.jpg");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(24px); 
+}
+
+.topBar {
+    background-color: orange;
+    width: 100%;
+    height: 2vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.topBarButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 1.5vw;
+    position: fixed;
+    right: 3%;
+    top: 1%;
+}
