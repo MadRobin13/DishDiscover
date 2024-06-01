@@ -42,9 +42,23 @@
     margin: auto;
     margin-top:20vw;
     border-radius: 1vw;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-.searchBar {
-    margin:auto;
+.searchBar{
+    margin: auto;
+    background-color: orange;
+    color: white;
+}
+
+.info {
+    background-color: rgba(0, 0, 0, 0.5);
+    width:50vw;
+    height: 60vw;
+    margin: auto;
+    margin-top: 5vw;
+    border-radius: 1vw;
+}
+
+.aboutTitle {
+    color: white;
 }
