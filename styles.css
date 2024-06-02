@@ -67,4 +67,17 @@
 
 .aboutTitle {
     color: white;
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 2vw;
+    padding-top: 1vw;;
+}
+
+.writing {
+    color: white;
+    text-align: center;
+    font-size: 1vw;
+    margin: 1vw;
+    padding: 0.5vw;
+    font-family: 'Courier New', Courier, monospace;
 }
