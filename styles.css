@@ -19,7 +19,7 @@
 .topBar {
     background-color: orange;
     width: 100%;
-    height: 2vw;
+    height: 3.5vw;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,7 +32,13 @@
     gap: 1.5vw;
     position: fixed;
     right: 3%;
-    top: 1%;
+    top: 0.7vw;
+    justify-content: space-around;
+    align-items: center;
+}
+.buttons {
+    width: 2vw; /* Set a standard width for all images */
+    height: auto; /* Maintain aspect ratio */
 }
 
 .searchBarBox {
