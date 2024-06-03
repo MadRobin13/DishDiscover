@@ -1,16 +1,30 @@
-const {MongoClient} = require('mongodb');
-const uri = "mongodb+srv://mongo:mongo@java-coffee.06pqnyw.mongodb.net/?retryWrites=true&w=majority&appName=Java-Coffee";
-const client = new MongoClient(uri);
+const fs = require('fs').promises;
+const { MongoClient } = require('mongodb');
+
+let theKey = '';
+
+async function readKey() {
+    try {
+        theKey = await fs.readFile('mongoKey', 'utf8');
+    } catch (err) {
+        console.error("Couldn't read from file: ", err);
+        process.exit(1); 
+    }
+}
 
 async function main() {
+    await readKey();
+
+    const uri = "mongodb+srv://mongo:" + theKey + "@java-coffee.06pqnyw.mongodb.net/?retryWrites=true&w=majority&appName=Java-Coffee";
+    const client = new MongoClient(uri);
+
     try {
         await client.connect();
 
-        await addRecipe('John', 'Pasta', 'Boil water, Add pasta, Cook for 10 minutes', 'Pasta, Water');
+        await addRecipe(client, 'John', 'Pasta', 'Boil water, Add pasta, Cook for 10 minutes', 'Pasta, Water');
+        await getRecipe(client, 'Pasta', 'John');
 
-        await getRecipe('Pasta', 'John');
-
-    } catch(e) {
+    } catch (e) {
         console.error(e);
     } finally {
         await client.close();
@@ -19,10 +33,10 @@ async function main() {
 
 main().catch(console.error);
 
-async function addRecipe(creator, food, steps, ings) {
+async function addRecipe(client, creator, food, steps, ings) {
     let ingredients = [];
     let recipe = [];
-    step = ''
+    let step = '';
     let ing = '';
 
     for (let i = 0; i < ings.length; i++) {
@@ -31,7 +45,7 @@ async function addRecipe(creator, food, steps, ings) {
             if (i != ings.length - 1) {
                 ing = ing.slice(0, ing.length - 1);
             }
-            ingredients.push(ing);
+            ingredients.push(ing.trim());
             ing = '';
         }
     }
@@ -42,19 +56,24 @@ async function addRecipe(creator, food, steps, ings) {
             if (j != steps.length - 1) {
                 step = step.slice(0, step.length - 1);
             }
-            recipe.push(step);
+            recipe.push(step.trim());
             step = '';
         }
     }
 
-    await client.db("DishDiscover").collection("Recipes").insertOne({creator: creator, name: food, recipe: recipe, ingredients: ingredients});
-} 
+    await client.db("DishDiscover").collection("Recipes").insertOne({
+        creator: creator,
+        name: food,
+        recipe: recipe,
+        ingredients: ingredients
+    });
+}
 
-async function getRecipe(food, creator) {
-    const recipe = await client.db("DishDiscover").collection("Recipes").findOne({name: food, creator: creator});
+async function getRecipe(client, food, creator) {
+    const recipe = await client.db("DishDiscover").collection("Recipes").findOne({ name: food, creator: creator });
     console.log(recipe);
 }
 
-async function doomsday() {
+async function doomsday(client) {
     await client.db("DishDiscover").collection("Recipes").deleteMany({});
 }
