@@ -51,8 +51,10 @@
 }
 
 .searchBar{
-    margin: auto;
-    background-color: rgba(255, 167, 68, 100);
+    position: absolute;
+    margin: 0 auto;
+    border-radius: 0.3vw;
+    background-color: rgba(255, 167, 68, 0.95);
     color: white;
 }
 
