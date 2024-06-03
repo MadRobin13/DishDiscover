@@ -50,8 +50,49 @@
     border-radius: 1vw;
 }
 
+.createBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5vw;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 20vw;
+    height: 18vw;
+    margin: auto;
+    margin-top:15vw;
+    border-radius: 1vw;
+}
+
 .searchBar{
-    position: absolute;
+    width: 18vw;
+    margin: 0 auto;
+    border-radius: 0.3vw;
+    background-color: rgba(255, 167, 68, 0.95);
+    color: white;
+}
+
+#createName {
+    font-size:75%;
+    width: 18vw;
+    height: 2vw;
+    margin: 0 auto;
+    border-radius: 0.3vw;
+    background-color: rgba(255, 167, 68, 0.95);
+    color: white;
+}
+
+#createIngredients {
+    width: 18vw;
+    height: 3vw;
+    margin: 0 auto;
+    border-radius: 0.3vw;
+    background-color: rgba(255, 167, 68, 0.95);
+    color: white;
+}
+
+#createRecipe {
+    width: 18vw;
+    height: 7vw;
     margin: 0 auto;
     border-radius: 0.3vw;
     background-color: rgba(255, 167, 68, 0.95);
@@ -82,4 +123,39 @@
     margin: 1vw;
     padding: 0.5vw;
     font-family: 'Courier New', Courier, monospace;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.search-box {
+    border: 3px solid rgba(164, 88, 0, 0.95);
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    background-color: rgba(255, 167, 68, 0.95)
+}
+
+.search-box::placeholder {
+    color: rgba(164, 88, 0, 0.95);
+    font-family: "Times New Roman", Times, serif;
+  }
+
+.search-button {
+    border: 3px solid rgba(164, 88, 0, 0.95);
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgba(255, 167, 68, 0.95);
+    color: rgba(164, 88, 0, 0.95);
+    font-family: "Times New Roman", Times, serif;
+}
+
+.search-button:hover {
+    background-color: rgba(255, 188, 112, 0.95);;
 }
