@@ -18,12 +18,20 @@
         </div>
     </div>
 
+    <img src="images\top_ad_v2.png" alt="advertisement" id="adAPR" class="topAd">
+
     <div class="createBox">
         <!-- <label for="createImg" class="searchBar" id="createImgLabel">Image?</label>
         <input type="file" placeholder="Image?" class="searchBar" id="createImg"> -->
         <input type="text" placeholder=" Name?" class="searchBar" id="createName">
+        <input type="text" placeholder=" Food?" class="searchBar" id="createFood">
         <textarea placeholder=" Ingredients?" class="searchBar" id="createIngredients"></textarea>
         <textarea placeholder=" Recipe?" class="searchBar" id="createRecipe"></textarea>
+        <button id="createButton" class="searchBar" onclick="await addrecipe(client)">Submit!</button>
     </div>
 </body>
+
+<script src="script.js">
+</script>
+
 </html>

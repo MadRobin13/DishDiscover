@@ -23,7 +23,17 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 0;
+    z-index: 2;
+    position: fixed;
+}
+
+.topBarBuffer {
+    width: 100%;
+    height: 4vw;
+    top: 0;
+    left: 0;
+    position: sticky;
+    display: none;
 }
 
 .topBarButtons{
@@ -57,7 +67,7 @@
     gap: 1vw;
     background-color: rgba(0, 0, 0, 0.5);
     width: 20vw;
-    height: 16vw;
+    height: 23vw;
     margin: auto;
     margin-top:15vw;
     border-radius: 1vw;
@@ -91,6 +101,15 @@
     padding-bottom: 0.5vw;
 }
 
+.topAd {
+    position: sticky;
+    top: 4vw;
+    margin-top: 5vw;
+    width: 75%;
+    z-index: 1;
+    left: 12.5%;
+}
+
 #createImgLabel:hover {
     background-color: rgba(255, 188, 112, 0.95);
 }
@@ -98,7 +117,17 @@
 #createName {
     font-size:75%;
     width: 18vw;
-    height: 1vw;
+    height: 1.5vw;
+    margin: 0 auto;
+    border-radius: 0.3vw;
+    background-color: rgba(255, 167, 68, 0.95);
+    color: white;
+}
+
+#createFood {
+    font-size:75%;
+    width: 18vw;
+    height: 1.5vw;
     margin: 0 auto;
     border-radius: 0.3vw;
     background-color: rgba(255, 167, 68, 0.95);
@@ -123,6 +152,22 @@
     color: white;
 }
 
+#createButton {
+    width: 18vw;
+    height: 2vw;
+    margin: 0 auto;
+    border-radius: 0.3vw;
+    background-color: rgba(255, 167, 68, 0.95);
+    color: white;
+    text-align: center;
+    padding-top: 0.5vw;
+    padding-bottom: 1.5vw;
+}
+
+#createButton:hover {
+    background-color: rgba(255, 188, 112, 0.95);
+}
+
 .info {
     background-color: rgba(0, 0, 0, 0.5);
     width:50vw;
@@ -130,6 +175,8 @@
     margin: auto;
     margin-top: 5vw;
     border-radius: 1vw;
+    position: relative;
+    z-index: 0;
 }
 
 .aboutTitle {

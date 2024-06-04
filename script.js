@@ -33,7 +33,12 @@ async function main() {
 
 main().catch(console.error);
 
-async function addRecipe(client, creator, food, steps, ings) {
+async function addRecipe(client) {
+    alert('in');
+    let creator = document.getElementById('createName').value;
+    let food = document.getElementById('createFood').value;
+    let steps = document.getElementById('createRecipe').value;
+    let ings = document.getElementById('createIngredients').value;
     let ingredients = [];
     let recipe = [];
     let step = '';
