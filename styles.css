@@ -18,37 +18,27 @@
 
 .topBar {
     background-color: rgba(255, 167, 68, 0.95);
-    width: 100%;
+    width: viewport-width;
     height: 3.5vw;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
-    position: fixed;
-}
-
-.topBarBuffer {
-    width: 100%;
-    height: 4vw;
-    top: 0;
-    left: 0;
-    position: sticky;
-    display: none;
+    min-width: 100%;
+    max-width: 100%;
 }
 
 .topBarButtons{
     display: flex;
     flex-direction: row;
-    gap: 1.5vw;
-    position: fixed;
-    right: 3%;
-    top: 0.7vw;
-    justify-content: space-around;
-    align-items: center;
+    gap: 1vw;
+    position: absolute;
+    padding: 0.7vw;
 }
 .buttons {
     width: 2vw; /* Set a standard width for all images */
     height: auto; /* Maintain aspect ratio */
+    margin-left: 0.5vw;
 }
 
 .searchBarBox {
@@ -107,7 +97,7 @@
     margin-top: 5vw;
     width: 50%;
     z-index: 1;
-    left: 25%;
+    margin-left: 25%;
 }
 
 #createImgLabel:hover {
@@ -153,7 +143,7 @@
 }
 
 #createButton {
-    width: 18vw;
+    width: 18;
     height: 2vw;
     margin: 0 auto;
     border-radius: 0.3vw;
@@ -198,7 +188,7 @@
 
 .search-container {
     display: flex;
-    justify-content: center;
+    justify-content: top;
     margin-top: 50px;
 }
 
@@ -223,7 +213,7 @@
     font-size: 16px;
     cursor: pointer;
     background-color: rgba(255, 167, 68, 0.95);
-    color: rgba(164, 88, 0, 0.95);
+    color: rgba(84, 45, 0, 0.95);
     font-family: "Times New Roman", Times, serif;
 }
 
