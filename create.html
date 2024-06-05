@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images\restaurant-17.png">
     <title>Create New Recipe</title>
+    <script type="text/javascript" src="script.js">
+    </script>
 </head>
 <body>
     <div class="bg"></div>
@@ -15,24 +17,28 @@
             <a href="create.html"><img src="./images/3658773.png" alt="create a recipe button" class="buttons"></a>
             <a href="info.html"><img src="./images/about-us-22.png" alt="about us button" class="buttons"></a>
             <a href="index.html"><img src="./images/find-icon.png" alt="find a recipe button" class="buttons"></a>
-            <a href="example.html"> .</a>
         </div>
     </div>
 
     <img src="images\top_ad_v2.png" alt="advertisement" id="adAPR" class="topAd">
 
-    <div class="createBox">
-        <!-- <label for="createImg" class="searchBar" id="createImgLabel">Image?</label>
-        <input type="file" placeholder="Image?" class="searchBar" id="createImg"> -->
-        <input type="text" placeholder=" Name?" class="searchBar" id="createName">
-        <input type="text" placeholder=" Food?" class="searchBar" id="createFood">
-        <textarea placeholder=" Ingredients?" class="searchBar" id="createIngredients"></textarea>
-        <textarea placeholder=" Recipe?" class="searchBar" id="createRecipe"></textarea>
-        <button id="createButton" class="searchBar" onclick="await addrecipe(client)">Submit!</button>
-    </div>
+    <form id="createForm">
+        <div class="createBox">
+            <!-- <label for="createImg" class="searchBar" id="createImgLabel">Image?</label>
+            <input type="file" placeholder="Image?" class="searchBar" id="createImg"> -->
+            <input type="text" placeholder=" Name?" class="searchBar" id="createName">
+            <input type="text" placeholder=" Food?" class="searchBar" id="createFood">
+            <textarea placeholder=" Ingredients?" class="searchBar" id="createIngredients"></textarea>
+            <textarea placeholder=" Recipe?" class="searchBar" id="createRecipe"></textarea>
+            <button type="submit" id="createButton" class="searchBar">Submit!</button>
+        </div>
+    </form>
 </body>
-
-<script src="script.js">
-</script>
+    <script>
+        document.getElementById('createForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            await addRecipe();
+        });
+    </script>
 
 </html>
