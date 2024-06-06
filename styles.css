@@ -53,7 +53,7 @@
 .exampleBox {
     background-color: rgba(0, 0, 0, 0.5);
     width: 60vw;
-    height: 81vw;
+    height: 83vw;
     margin: auto;
     margin-top:3vw;
     border-radius: 1vw;
@@ -84,7 +84,7 @@
     /* margin: 1vw; */
     padding: 1vw;
     text-align: left;
-    padding-top: 45vw;
+    padding-top: 47vw;
 }
 
 .weirdText {
@@ -107,10 +107,24 @@
     width:58vw;
     height: auto;
     padding: 1.5vw;
-    top: 4vw;
+    top: 7vw;
     left: 19vw;
     border-radius: 2.5vw;
     }
+
+#exampleB {
+    position: absolute;
+    width: 58vw;
+    height: auto;
+    padding: 1.5vw;
+    top: 2vw;
+    left: 19vw;
+    border-radius: 2.5vw;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+
+}
 
 .createBox {
     display: flex;
