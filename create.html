@@ -6,8 +6,6 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="images\restaurant-17.png">
     <title>Create New Recipe</title>
-    <script type="text/javascript" src="script.js">
-    </script>
 </head>
 <body>
     <div class="bg"></div>
@@ -18,6 +16,9 @@
             <a href="info.html"><img src="./images/about-us-22.png" alt="about us button" class="buttons"></a>
             <a href="index.html"><img src="./images/find-icon.png" alt="find a recipe button" class="buttons"></a>
         </div>
+    </div>
+    <div class="bottomBar">
+        <a href="https://forms.gle/a65Ec3S7bNT3WS6C8" id="contact"><img src="./images/3095583.png" alt=""></a>
     </div>
 
     <img src="images\top_ad_v2.png" alt="advertisement" id="adAPR" class="topAd">
@@ -30,15 +31,32 @@
             <input type="text" placeholder=" Food?" class="searchBar" id="createFood">
             <textarea placeholder=" Ingredients?" class="searchBar" id="createIngredients"></textarea>
             <textarea placeholder=" Recipe?" class="searchBar" id="createRecipe"></textarea>
-            <button type="submit" id="createButton" class="searchBar">Submit!</button>
+            <button type="submit" id="createButton" class="searchBar" onclick="logData()">Submit!</button>
         </div>
     </form>
 </body>
-    <script>
-        document.getElementById('createForm').addEventListener('submit', async function(event) {
-            event.preventDefault();
-            await addRecipe();
-        });
-    </script>
+
+<script>
+    function logData() {
+
+        // localStorage.removeItem("newFood");
+
+        let creator = document.getElementById('createName').value;
+        let food = document.getElementById('createFood').value;
+        let ingredients = document.getElementById('createIngredients').value;
+        let recipe = document.getElementById('createRecipe').value;
+
+        let ing = ingredients.split(',').map(ing => ing.trim());
+        let rec = recipe.split(',').map(step => step.trim());
+
+
+        localStorage.setItem("newFood", JSON.stringify({
+            creator: creator,
+            food: food,
+            ingredients: ing,
+            recipe: rec
+        }));
+    }
+</script>
 
 </html>

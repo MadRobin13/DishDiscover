@@ -1,9 +1,12 @@
 const fs = require('fs').promises;
 const { MongoClient } = require('mongodb');
-let creator = document.getElementById('createName').value;
-let food = document.getElementById('createFood').value;
-let steps = document.getElementById('createRecipe').value;
-let ings = document.getElementById('createIngredients').value;
+const { LocalStorage } = require('node-localstorage');
+
+if (typeof localStorage === "undefined" || localStorage === null) {
+    // let LocalStorage = require('node-localstorage').LocalStorage;
+    localStorage = new LocalStorage('./scratch');
+  }
+
 let client;
 
 let theKey = '';
@@ -25,8 +28,7 @@ async function main() {
     try {
         await client.connect();
 
-        //await addRecipe(client, 'John', 'Pasta', 'Boil water, Add pasta, Cook for 10 minutes', 'Pasta, Water');
-        // await getRecipe(client, 'Pasta', 'John');
+        await addRecipe();
 
     } catch (e) {
         console.error(e);
@@ -38,16 +40,12 @@ async function main() {
 main().catch(console.error);
 
 async function addRecipe() {
-    alert(creator + " " + food + " " + steps + " " + ings);
-    let ingredients = ings.split(',').map(ing => ing.trim());
-    let recipe = steps.split(',').map(step => step.trim());
 
-    await client.db("DishDiscover").collection("Recipes").insertOne({
-        creator: creator,
-        name: food,
-        recipe: recipe,
-        ingredients: ingredients
-    });
+    newFood = localStorage.getItem('newFood');
+
+    // await client.db("DishDiscover").collection("Recipes").insertOne(newFood);
+
+    console.log(newFood);
 }
 
 async function getRecipe(client, food, creator) {

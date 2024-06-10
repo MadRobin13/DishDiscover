@@ -28,6 +28,38 @@
     max-width: 100%;
 }
 
+.topBarRight {
+    width: viewport-width;
+    height: 3.5vw;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+
+#contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    top: 0;
+    /* right: 0; */
+    position: relative;
+    width: 3.7vw;
+    height: 3.7vw;
+}
+
+.bottomBar {
+    background-color: rgba(255, 167, 68, 0.95);
+    width: viewport-width;
+    height: 3.5vw;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    min-width: 100%;
+    max-width: 100%;
+}
+
 .topBarButtons{
     padding: 0.5vw;
     display: flex;

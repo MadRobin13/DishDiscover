@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "main": "script.js",
   "scripts": {
-    "test": "echo nothing here...yet"
+    "script": "nodemon script.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "mongodb": "^6.7.0"
+  },
+  "devDependencies": {
+    "node-localstorage": "^3.0.5",
+    "nodemon": "^3.1.3"
   }
 }
