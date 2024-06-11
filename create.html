@@ -10,6 +10,7 @@
 <body>
     <div class="bg"></div>
     <div class="topBar">
+        <img src="images\DishDiscover Logo.png" alt="logo" id="logoTop">
         <div class="topBarButtons">
             <img src="images\DishDiscover Logo (2).png" alt="writing logo" id="logoWrite">
             <a href="shop.html"><img src="./images/1413908.png" alt="shopping cart button" class="buttons"></a>
@@ -40,7 +41,21 @@
             </div>
         </div>
     </form>
+    <video type="video/webm" src="videos\business_ad.mp4" id="adVid" controls autoplay></video>
 </body>
+
+<script>
+    const vid = document.getElementById('adVid');
+
+    vid.addEventListener('ended', () => {
+        vid.currentTime = 0;
+        vid.play();
+    });
+
+    vid.addEventListener('load', () => {
+        vid.play();
+    });
+</script>
 
 <script>
     let recipes = [];

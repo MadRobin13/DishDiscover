@@ -28,6 +28,14 @@
     max-width: 100%;
 }
 
+#logoTop {
+    width: 4vw;
+    height: auto;
+    position: fixed;
+    right: 0;
+    padding-top:0.2vw
+}
+
 .topBarRight {
     width: viewport-width;
     height: 3.5vw;
@@ -49,16 +57,36 @@
 }
 
 #adVid {
-    display: block;
-    margin: auto;
-    padding-top: 6vw; 
-    position: relative;
-    width: 40vw;
-    height: 43.3vh;
+    /* display: block;
+    margin: auto; */
+    /* padding-top: 6vw;  */
+    right: 0;
+    bottom: 3.5vw;
+    position: fixed;
+    width: 20vw;
+    height: 22.05vh;
     /* border-radius: 1vw; */
+    z-index: 3;
+    border: 0.2vw solid rgba(0, 2, 2, 0.95);
+    border-radius: 1vw;
 }
 
+#cardBack {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1vw;
+}
 
+#premium {
+    position: relative;
+    padding: 2vw;
+    display: block;
+    margin: auto;
+    z-index: 1;
+    width: 40vw;
+    margin-top: 10vw; 
+}
 
 /* .logo {
     display: block;
@@ -101,8 +129,8 @@
 
 .searchBarBox {
     background-color: rgba(0, 0, 0, 0.5);
-    width: 20vw;
-    height: 10vw;
+    width: 15vw;
+    height: 4.5vw;
     margin: auto;
     margin-top:15vw;
     border-radius: 1vw;
@@ -328,12 +356,12 @@
 
 .search-container {
     display: flex;
-    justify-content: top;
-    margin-top: 50px;
+    justify-content: center;
+    margin-top: 17vw;
+    padding-top: 1vw;
 }
 
 .search-box {
-    border: 3px solid rgba(164, 88, 0, 0.95);
     border-radius: 10px;
     padding: 10px;
     font-size: 16px;
@@ -341,12 +369,11 @@
 }
 
 .search-box::placeholder {
-    color: rgba(164, 88, 0, 0.95);
-    font-family: "Times New Roman", Times, serif;
+    color: white;
+    font-family:'Courier New', Courier, monospace;
   }
 
 .search-button {
-    border: 3px solid rgba(164, 88, 0, 0.95);
     border-radius: 10px;
     padding: 10px;
     margin-left: 5px;
