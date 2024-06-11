@@ -52,9 +52,10 @@
     display: block;
     margin: auto;
     padding-top: 6vw; 
-    width: 40%;
-    height: 40%;
     position: relative;
+    width: 40vw;
+    height: 43.3vh;
+    /* border-radius: 1vw; */
 }
 
 

@@ -36,14 +36,36 @@
             <input type="text" placeholder=" Food?" class="searchBar" id="createFood">
             <textarea placeholder=" Ingredients?" class="searchBar" id="createIngredients"></textarea>
             <textarea placeholder=" Recipe?" class="searchBar" id="createRecipe"></textarea>
-            <button type="submit" id="createButton" class="searchBar" onclick="logData()">Submit!</button>
+            <button type="submit" id="createButton" class="searchBar" onclick="logData(recipes)">Submit!</button>
             </div>
         </div>
     </form>
 </body>
 
 <script>
-    
+    let recipes = [];
+
+    function logData(recipes) {
+        let creator = document.getElementById('createName').value;
+        let food = document.getElementById('createFood').value;
+        let ingredients = document.getElementById('createIngredients').value;
+        let recipe = document.getElementById('createRecipe').value;
+
+        let ing = ingredients.split(',').map(ing => ing.trim());
+        let rec = recipe.split(',').map(step => step.trim());
+
+        let newFood = {
+            creator: creator,
+            food: food,
+            ingredients: ing,
+            recipe: rec
+        }
+
+        recipes.push(newFood);
+        localStorage.setItem("newFood", JSON.stringify(recipes));
+        console.log(JSON.stringify(newFood));
+
+    }
 </script>
 
 <!-- 
