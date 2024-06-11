@@ -1,11 +1,6 @@
 const fs = require('fs').promises;
 const { MongoClient } = require('mongodb');
-const { LocalStorage } = require('node-localstorage');
 
-if (typeof localStorage === "undefined" || localStorage === null) {
-    // let LocalStorage = require('node-localstorage').LocalStorage;
-    localStorage = new LocalStorage('./scratch');
-  }
 
 let client;
 
@@ -39,11 +34,9 @@ async function main() {
 
 main().catch(console.error);
 
-async function addRecipe() {
+export async function addRecipe(newFood) {
 
-    newFood = localStorage.getItem('newFood');
-
-    // await client.db("DishDiscover").collection("Recipes").insertOne(newFood);
+    await client.db("DishDiscover").collection("Recipes").insertOne(newFood);
 
     console.log(newFood);
 }

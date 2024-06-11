@@ -37,22 +37,39 @@
     z-index: 2;
 }
 
-#contact {
+.contacts {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    top: 0;
-    /* right: 0; */
     position: relative;
-    width: 3.7vw;
-    height: 3.7vw;
 }
 
-.logo {
-    width: 7vw;
+#contact {
+    width: 3.5vw;
+}
+
+#adVid {
+    display: block;
+    margin: auto;
+    padding-top: 6vw; 
+    width: 40%;
+    height: 40%;
+    position: relative;
+}
+
+
+
+/* .logo {
+    display: block;
+    margin: auto;
+    width: 27vw;
     height: auto;
     position: relative;
-    align-self: center;
+} */
+
+#logoWrite {
+    width: 6.5vw;
+    height: auto;
 }
 
 .bottomBar {
@@ -68,7 +85,8 @@
 }
 
 .topBarButtons{
-    padding: 0.5vw;
+    /* padding: 0.5vw; */
+    padding-top: 0.5vw;
     display: flex;
     flex-direction: row;
     gap: 1vw;
@@ -166,14 +184,12 @@
 }
 
 .createBox {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 1vw;
+    display: block;
+    margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
     width: 20vw;
     height: 23vw;
-    margin: auto;
+    /* margin: auto; */
     margin-top:3vw;
     border-radius: 1vw;
 }
@@ -188,6 +204,13 @@
     border-radius: 0.3vw;
     background-color: rgba(255, 167, 68, 0.95);
     color: white;
+}
+
+.createOrder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1vw;
 }
 
 #createImg {
@@ -220,10 +243,11 @@
 }
 
 #createName {
+    gap: 1vw;
     font-size:75%;
     width: 18vw;
     height: 1.5vw;
-    margin: 0 auto;
+    margin-top: 1vw;
     border-radius: 0.3vw;
     background-color: rgba(255, 167, 68, 0.95);
     color: white;
@@ -276,7 +300,7 @@
 .info {
     background-color: rgba(0, 0, 0, 0.5);
     width:50vw;
-    height: 86vw;
+    height: 125vw;
     margin: auto;
     margin-top: 5vw;
     border-radius: 1vw;
@@ -343,4 +367,12 @@
 
 .search-button:hover img {
     filter: brightness(0.8);
+}
+
+.center_cards {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: auto;
+    position: relative;
 }
