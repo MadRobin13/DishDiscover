@@ -39,4 +39,16 @@
 <script src="./script.js">
     const size = "Large";
 </script>
+<script>
+    const vid = document.getElementById('adVid');
+
+    vid.addEventListener('ended', () => {
+        vid.currentTime = 0;
+        vid.play();
+    });
+
+    vid.addEventListener('load', () => {
+        vid.play();
+    });
+</script>
 </html>

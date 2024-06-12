@@ -69,10 +69,10 @@
 }
 
 #adVid {
-    display: block;
-    margin: auto;
-    padding-top: 6vw; 
-    right: 0px;
+    /* display: block; */
+    /* margin: auto; */
+    /* padding-top: 6vw;  */
+    right: 0vw;
     bottom: 0vw;
     position: fixed;
     width: 20vw;
@@ -342,7 +342,18 @@
 .info {
     background-color: rgba(0, 0, 0, 0.5);
     width:50vw;
-    height: 110vw;
+    height: 100vw;
+    margin: auto;
+    margin-top: 5vw;
+    border-radius: 1vw;
+    position: relative;
+    z-index: 0;
+}
+
+.business {
+    background-color: rgba(0, 0, 0, 0.5);
+    width:50vw;
+    height: 155vw;
     margin: auto;
     margin-top: 5vw;
     border-radius: 1vw;
@@ -415,8 +426,6 @@
 .center_cards {
     display: flex;
     justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: auto;
     position: relative;
     gap: 1vw;
 }
@@ -428,6 +437,7 @@
 
 .card-main {
     border-radius: 1vw;
+    width: 18vw;
 }
 
 .buttonSuit {

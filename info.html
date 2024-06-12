@@ -33,7 +33,7 @@
         <div class="writing">
             <h2>Our Mission</h2>
             <p>Welcome to DishDiscover, a passionate project born out of a small yet dedicated team of software developers. Our mission is to foster a vibrant community where culinary enthusiasts can come together to share their favorite recipes, learn new cooking techniques, and discover the joy of creating delicious meals.</p>
-            <p>Our flexible database enables users to upload and discover recipes effortlessly. Uploads are automatically processed by our AI model for consistent, easy-to-read formats. Additionally, our versatile search engine provides personalized recipe recommendations post-search.</p>
+            <p>Our flexible database enables users to upload and discover recipes effortlessly. Uploads are automatically processed by our AI model for consistent, easy-to-read formats. Additionally, our versatile search engine provides personalized recipe recommendations.</p>
             <!-- <p>We generate revenue via strategically-placed data driven ads on our website, ensuring you find our ads as helpful as our website. We've seen that people prefer ads on a free website oer a paid servvice through a survey:</p>
             <img src="./images/Data_survey.png" id="dataSurvey"> -->
                 
@@ -53,7 +53,7 @@
                 
                 <p><strong>Jamie Peacock - Junior Developer</strong></p>
 
-                <p>With 1 year of experience, Jamie has already accomplished many incredible such as styling up the frontend and collaborating with many other developers on experimental features.</p>
+                <p>With 1 year of experience, Jamie has already accomplished many incredible feats such as styling up the frontend and collaborating with many other developers on experimental features.</p>
                
                 <div id="cardBack">
                     <div class="center_cards">
@@ -77,24 +77,27 @@
                 <p>Happy cooking!</p>
                 
                 <strong>- The DishDiscover Team ;P</strong>
-                <p>⠀</p>
         </div>
         <div class="center_cards">
-        <img src="./images/DishDiscover Front.jpg" class="card-main" width=400vw height=229vw>
-        </div>
-        <p>⠀</p>
-        <div class="center_cards">
-        </div>
-        <p>⠀</p>
-        <div class="center_cards">
+        <img src="./images/DishDiscover Front.jpg" class="card-main">
     </div>
-        <div class="writing">
-        </div>
-        <p>⠀</p>
-        <p>⠀</p>
-        <p>⠀</p>
-        <p>⠀</p>
-        <p>⠀</p>
     </div>
+    <p>⠀</p>
+    <p>⠀</p>
+    <p>⠀</p>
+    <p>⠀</p>
+    <p>⠀</p>
 </body>
+<script>
+    const vid = document.getElementById('adVid');
+
+    vid.addEventListener('ended', () => {
+        vid.currentTime = 0;
+        vid.play();
+    });
+
+    vid.addEventListener('load', () => {
+        vid.play();
+    });
+</script>
 </html>

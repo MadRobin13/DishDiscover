@@ -27,24 +27,28 @@
     </div>
     <video type="video/webm" src="videos\business_ad.mp4" id="adVid" controls autoplay></video>
         <img src="images\top_ad_v2.png" alt="advertisement" id="adAPR" class="topAd">
-    <div class="info">
+    <div class="business">
         <h1 class="aboutTitle">Business Plan</h1>
         <hr>
         <div class="writing">
             <h2>Our Revenue</h2>           
-            <p>We generate revenue via strategically-placed data driven ads on our website, ensuring you find our ads as helpful as our website. We've seen that people prefer ads on a free website over a paid service through a survey we did:</p>
+            <p>We generate revenue via strategically-placed data driven ads on our website (and general ads if you choose), ensuring you find our ads as helpful as our website. We've seen that people prefer ads on a free website over a paid service through a survey we did so we only offer this ad-free as a premium version:</p>
             <img src="./images/Data_survey.png" id="dataSurvey">
+            <p>We've finely tuned our advertising strategy to strike the perfect balance, maximizing revenue while simultaneously having a clean and relatively ad-free website:</p>
+            <img src="./images/ad_survey.png" id="dataSurvey">
+            <p>Through our survey we have seen that people prefer sturcutred and formatted recipes so we implemented</p>
+            <img src="./images/layout_survey.png" id="dataSurvey">
             <p>⠀</p>
                 <h2>Our Business Plan</h2>
 
-                <p>At Dish Discover, we've optimized our financial model to minimize fixed costs, directing the majority of our budget towards our talented team. By operating in virtual spaces and leveraging digital tools, we've eliminated unnecessary expenses, ensuring that our resources are efficiently allocated to delivering exceptional culinary experiences for our users.</p>
+                <p>At Dish Discover, we've optimized our financial model to minimize fixed costs, directing the majority of our budget towards our talented team. By operating in a smaller office and leveraging open-source digital tools, we've eliminated unnecessary expenses, ensuring that our resources are efficiently allocated to deliver an exceptional experience to our users.</p>
 
                 <img src="./images/Screenshot 2024-06-11 104204.png" id="busPlan">
                 <p>⠀</p>
                 <h2>Our Proposal</h2>
 
                 <p>Dish Discover: a groundbreaking online platform redefining recipe exploration. Through state-of-the-art AI, we've standardized recipes, and tailored recommendations, ensuring a perfected culinary journey for every user. Here's the twist: our calculated financial approach minimizes fixed costs, allowing us to invest heavily in our exceptional team. With revenue streams from targeted advertisements and premium subscriptions, Dish Discover is not just a culinary game-changer, but a financially savvy investment opportunity. Join us in revolutionizing the cooking experience, where innovation meets profitability.</p>
-                <p>We are seeking $200,000 for 20% of our company and a 3% royalty until the $200,000 is paid off.</p>
+                <p>We estimate our entire company is worth $800 000 so we are seeking $200,000 for 20% of our company and a 3% royalty until the $200,000 is paid off.</p>
                 
         </div>
         <p>⠀</p>
@@ -54,4 +58,16 @@
         <p>⠀</p>
     </div>
 </body>
+<script>
+    const vid = document.getElementById('adVid');
+
+    vid.addEventListener('ended', () => {
+        vid.currentTime = 0;
+        vid.play();
+    });
+
+    vid.addEventListener('load', () => {
+        vid.play();
+    });
+</script>
 </html>
