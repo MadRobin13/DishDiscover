@@ -2,10 +2,11 @@
   "name": "art",
   "version": "1.0.0",
   "main": "script.js",
-  "type": "module",
   "scripts": {
-    "script": "node script.js",
-    "nodemon": "nodemon script.js"
+    "start:cript": "node script.js",
+    "start:nodemon": "nodemon send.js",
+    "start:everything": "nodemon script.js && live-server create.html",
+    "start:server": "live-server create.html"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "mongodb": "^6.7.0"
   },
   "devDependencies": {
+    "express": "^4.19.2",
     "node-localstorage": "^3.0.5",
     "nodemon": "^3.1.3"
   },

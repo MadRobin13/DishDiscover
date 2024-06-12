@@ -1,7 +1,8 @@
-const fs = require('fs').promises;
-const { MongoClient } = require('mongodb');
+// const fs = require('fs').promises;
+// const { MongoClient } = require('mongodb');
 
-
+import {promises as fs} from 'fs';
+import { MongoClient} from 'mongodb';
 let client;
 
 let theKey = '';
@@ -49,3 +50,5 @@ async function getRecipe(client, food, creator) {
 async function doomsday(client) {
     await client.db("DishDiscover").collection("Recipes").deleteMany({});
 }
+
+module.exports = { addRecipe, getRecipe, doomsday };

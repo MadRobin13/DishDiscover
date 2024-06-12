@@ -17,6 +17,7 @@
             <a href="create.html"><img src="./images/3658773.png" alt="create a recipe button" class="buttons"></a>
             <a href="info.html"><img src="./images/about-us-22.png" alt="about us button" class="buttons"></a>
             <a href="index.html"><img src="./images/find-icon.png" alt="find a recipe button" class="buttons"></a>
+            <a href="business.html"><img src="./images/Suitcase_icon.svg.png" alt="business plan" class="buttonSuit"></a>
         </div>
     </div>
     <div class="bottomBar">
@@ -37,11 +38,11 @@
             <input type="text" placeholder=" Food?" class="searchBar" id="createFood">
             <textarea placeholder=" Ingredients?" class="searchBar" id="createIngredients"></textarea>
             <textarea placeholder=" Recipe?" class="searchBar" id="createRecipe"></textarea>
-            <button type="submit" id="createButton" class="searchBar" onclick="logData(recipes)">Submit!</button>
+            <button type="submit" id="createButton" class="searchBar">Submit!</button>
             </div>
         </div>
     </form>
-    <video type="video/webm" src="videos\business_ad.mp4" id="adVid" controls autoplay></video>
+    <video type="video/webm" src="videos\business_ad.mp4" id="adVid" controls autoplay>An error occured with your browser (VIDEO_PERMISSION_ERROR: 500)</video>
 </body>
 
 <script>
@@ -57,7 +58,36 @@
     });
 </script>
 
-<script>
+<script type="module">
+
+    import { saveToJson } from "./send.js";
+
+    let submitBtn = document.getElementById('createButton');
+
+    submitBtn.addEventListener('click', (e) => {
+
+        let creator = document.getElementById('createName').value;
+        let food = document.getElementById('createFood').value;
+        let ingredients = document.getElementById('createIngredients').value;
+        let recipe = document.getElementById('createRecipe').value;
+
+        let ing = ingredients.split(',').map(ing => ing.trim());
+        let rec = recipe.split(',').map(rec => rec.trim());
+
+        let newFood = {
+            creator: creator,
+            food: food,
+            ingredients: ing,
+            recipe: rec
+        }
+
+        e.preventDefault();
+        saveToJson(newFood);
+        localStorage.setItem("newFood", JSON.stringify(newFood));
+    });
+</script>
+
+<!-- <script>
     let recipes = [];
 
     function logData(recipes) {
@@ -81,7 +111,7 @@
         console.log(JSON.stringify(newFood));
 
     }
-</script>
+</script> -->
 
 <!-- 
 <script>

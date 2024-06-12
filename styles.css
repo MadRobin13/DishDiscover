@@ -18,7 +18,7 @@
 
 .topBar {
     background-color: rgba(255, 167, 68, 0.95);
-    width: viewport-width;
+    width: 100vw;
     height: 3.5vw;
     position: fixed;
     top: 0;
@@ -56,19 +56,31 @@
     width: 3.5vw;
 }
 
+#dataSurvey {
+    width: 40vw;
+    height: auto;
+    border-radius: 1vw;
+}
+
+#busPlan {
+    width: 40vw;
+    height: auto;
+    border-radius: 1vw;
+}
+
 #adVid {
-    /* display: block;
-    margin: auto; */
-    /* padding-top: 6vw;  */
-    right: 0;
-    bottom: 3.5vw;
+    display: block;
+    margin: auto;
+    padding-top: 6vw; 
+    right: 0px;
+    bottom: 0vw;
     position: fixed;
     width: 20vw;
-    height: 22.05vh;
+    height: 20.7vh;
     /* border-radius: 1vw; */
     z-index: 3;
-    border: 0.2vw solid rgba(0, 2, 2, 0.95);
-    border-radius: 1vw;
+    /* border: 0.2vw solid rgba(0, 2, 2, 0.95); */
+    /* border-radius: 1vw; */
 }
 
 #cardBack {
@@ -129,8 +141,8 @@
 
 .searchBarBox {
     background-color: rgba(0, 0, 0, 0.5);
-    width: 15vw;
-    height: 4.5vw;
+    width: 21vw;
+    height: 5.5vw;
     margin: auto;
     margin-top:15vw;
     border-radius: 1vw;
@@ -217,7 +229,7 @@
     margin: auto;
     background-color: rgba(0, 0, 0, 0.5);
     width: 20vw;
-    height: 23vw;
+    height: 22.3vw;
     /* margin: auto; */
     margin-top:3vw;
     border-radius: 1vw;
@@ -233,6 +245,7 @@
     border-radius: 0.3vw;
     background-color: rgba(255, 167, 68, 0.95);
     color: white;
+    position: relative;
 }
 
 .createOrder {
@@ -329,7 +342,7 @@
 .info {
     background-color: rgba(0, 0, 0, 0.5);
     width:50vw;
-    height: 125vw;
+    height: 110vw;
     margin: auto;
     margin-top: 5vw;
     border-radius: 1vw;
@@ -362,10 +375,12 @@
 }
 
 .search-box {
-    border-radius: 10px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: rgba(255, 167, 68, 0.95)
+    border-radius: 1vw;
+    padding: 1vw;
+    font-size: 1vw;
+    background-color: rgba(255, 167, 68, 0.95);
+    width: 60%;
+    height: 20%;
 }
 
 .search-box::placeholder {
@@ -375,9 +390,9 @@
 
 .search-button {
     border-radius: 10px;
-    padding: 10px;
-    margin-left: 5px;
-    font-size: 16px;
+    width: 20%;
+    height: 6.5vh;
+    /* padding: 1vw; */
     cursor: pointer;
     background-color: rgba(255, 167, 68, 0.95);
     color: rgba(84, 45, 0, 0.95);
@@ -403,4 +418,20 @@
     align-items: center; /* Center vertically */
     margin: auto;
     position: relative;
+    gap: 1vw;
+}
+
+.card {
+    width: 23vw;
+    border-radius: 1vw;
+}
+
+.card-main {
+    border-radius: 1vw;
+}
+
+.buttonSuit {
+        width: 2.5vw; /* Set a standard width for all images */
+        height: auto; /* Maintain aspect ratio */
+        margin-left: 0.5vw;
 }
