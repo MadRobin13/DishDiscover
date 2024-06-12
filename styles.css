@@ -97,7 +97,7 @@
     margin: auto;
     z-index: 1;
     width: 40vw;
-    margin-top: 10vw; 
+    margin-top: 5vw; 
 }
 
 /* .logo {
@@ -144,7 +144,7 @@
     width: 21vw;
     height: 5.5vw;
     margin: auto;
-    margin-top:15vw;
+    margin-top:8vw;
     border-radius: 1vw;
 }
 
@@ -381,7 +381,6 @@
 .search-container {
     display: flex;
     justify-content: center;
-    margin-top: 17vw;
     padding-top: 1vw;
 }
 
