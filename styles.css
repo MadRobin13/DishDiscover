@@ -64,7 +64,8 @@
 
 #busPlan {
     width: 40vw;
-    height: auto;
+    height: 37.3vw;
+    object-fit: cover;
     border-radius: 1vw;
 }
 
