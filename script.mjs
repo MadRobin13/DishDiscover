@@ -51,4 +51,4 @@ async function doomsday(client) {
     await client.db("DishDiscover").collection("Recipes").deleteMany({});
 }
 
-module.exports = { addRecipe, getRecipe, doomsday };
+//module.exports = { addRecipe, getRecipe, doomsday };
